@@ -52,6 +52,11 @@ app.use('/feedback', feedbackRouter);
 app.use('/api/feedback', feedbackRouter);
 app.use('/api/contact', contactRouter);
 
+// ✅ Default route for root "/"
+app.get("/", (req, res) => {
+  res.send("✅ Pitch For Profit Backend is live and running");
+});
+
 app.listen(port, () => {
   console.log(`🚀 Server Running on port ${port}`);
 });
